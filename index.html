@@ -1,15 +1,17 @@
 <br>
 <h1 style="text-align:center; font-family: EB Garamond; color: #B71C1C;"> Havuç Ve Salatalık Tanıma </h1>   
-<body style="background-color: #E0E0E0 
-            
+<body style="background-color:#E0E0E0" >
+<button type="button" onclick="init()">Kamera Aç</button>
+                                  
+<div id="webcam-container"></div>
+<div id="label-container"></div>
+</body>        
             
 
     
     
     
-<button type="button" onclick="init()">Kamera Aç</button>
-<div id="webcam-container"></div>
-<div id="label-container"></div>
+
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
