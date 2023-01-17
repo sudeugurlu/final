@@ -66,8 +66,13 @@
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         for (let i = 0; i < maxPredictions; i++) {
+          let probability = 0;
+          
+         if(Math.floor(prediction[i].probability.toFixed(2))==1){
+         probability=100;
+         }
             const classPrediction =
-                prediction[i].className + ": " +  Math.floor(prediction[i].probability.toFixed(2));
+                prediction[i].className + ": " + probability;
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
     }
